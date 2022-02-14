@@ -1,0 +1,112 @@
+
+
+backend:
+  name: github
+  repo: trobins15/cmts_jekyll
+  base_url: #https://federalistapp.18f.gov
+  auth_endpoint: #external/auth/github
+  preview_context: #federalist/build
+  branch: main
+
+media_folder: assets/uploads
+public_folder: /images/uploads
+#publish_mode: editorial_workflow
+logo_url: https://federalist.18f.gov/assets/images/federalist-logo.png
+
+collections:
+  - label: Posts
+    name: posts
+    folder: _posts/
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - {label: 'Layout', name: 'layout', widget: 'hidden', default: 'post'}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Event Date Time",
+          name: "event_date",
+          widget: "datetime",
+          default: "",
+          date_format: "dddd DD.MM.YYYY", # e.g. 24.12.2021
+          time_format: "HH:mm", # e.g. 21:07
+          format: "LLLL",
+          picker_utc: false}
+      - {
+          label: "Publish Date",
+          name: "date",
+          widget: "datetime",
+          format: 'MMMM D, YYYY',
+          dateFormat: 'MMMM D, YYYY',
+          timeFormat: false
+        }
+      - {label: "Body", name: "body", widget: "markdown"}
+      - {label: "Category",
+          name: "category",
+          widget: "select",
+          multiple: true,
+          allow add: true,
+          options: ["IAT Activity", "Press Release", "Information Update", "Resource Update", "Technological Update", "Organizational Change", "Policy Change", "Upcoming Event"]
+        }
+      - {label: "Tags",
+         name: "tags",
+         widget: "select",
+         multiple: true,
+         allow add: true,
+         options: ["Arctic", "Energy", "Air Emissions", "Future of Navigation", "Infrastructure", "Maritime Data", "Ocean Policy", "R&D", "Resilience", "Education", "Safety and Security", "Economics", "Environmental Stewardship", "Capacity", "National Strategy", "Performance Measures"]
+        }
+      - {label: "Doc 1",
+         name: "doc1",
+         widget: "file",
+         media_folder: "../assets/uploads/documents",
+         public_folder: "/documents"
+         }
+  - label: "Web Pages"
+    name: pages
+    label_singular: page
+    folder: _pages/
+    create: true
+    preview_path: "{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Sidenav', name: 'sidenav', widget: 'boolean' }
+      - { label: 'Body', name: 'body', widget: 'markdown' }
+      - { label: "Manual PDF",
+         name: "manual_pdf",
+         widget: "file",
+         mulitple: true
+         }
+  - label: "Document Posts"
+    name: docposts
+    label_singular: "Document Post"
+    #folder: _assets/documents
+    folder: _docposts/
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    editor:
+      preview: false
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: "Upload Date",
+          name: "date",
+          widget: "datetime",
+          format: 'MMMM D, YYYY',
+          dateFormat: 'MMMM D, YYYY',
+          timeFormat: false
+        }
+      - { label: "Document",
+          name: "Document",
+          widget: "file",
+          media_folder: "../assets/uploads/documents",
+          public_folder: "/documents"
+         }
+      - {label: "Tags",
+          name: "tags",
+          widget: "select",
+          multiple: true,
+          allow add: true,
+          options: ["Arctic", "Energy", "Air Emissions", "Future of Navigation", "Infrastructure", "Maritime Data", "Ocean Policy", "R&D", "Resilience", "Education", "Safety and Security", "Economics", "Environmental Stewardship", "Capacity", "National Strategy", "Performance Measures"]
+         }
+

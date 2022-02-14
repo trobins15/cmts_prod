@@ -1,0 +1,152 @@
+
+.article {
+  padding-bottom: 1em;
+
+  h1 {
+    //margin-top: 1em;
+    margin-bottom: .5em;
+    @extend .center-title
+
+  }
+
+  .center-title {
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #32c5d2;
+    position: relative;
+    font-family: Raleway,Open Sans,Roboto,sans-serif;
+    font-weight: 600;
+  }
+
+  h2 {
+    margin-top: .5em;
+    color: #32c5d2;
+  }
+
+  h3 {
+    margin-top: .5em;
+
+  }
+
+  h4 {
+    margin-top: 1em;
+    margin-bottom: .1em;
+  }
+
+  section {
+    border-bottom: 1px solid #e2e1e1;
+    padding: 0.5em 0.5em 1em 0.5em ;
+  }
+
+  ul {
+    list-style: disc outside;
+    margin: 0 0.5em 1em;
+    padding-left: 1.5em;
+  }
+
+  ul ul {
+    list-style: circle outside;
+    padding-left: 1.5em;
+  }
+
+  li > span {
+    //font-style: italic;
+    color: #dd6644;
+  }
+
+  small {
+    font-style: italic;
+    font-size: small;
+	  margin-top: 2em;
+  }
+
+  figure {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 1em auto;
+
+    img {
+      display: flex;
+      justify-content: center; /* align horizontal */
+      align-items: center; /* align vertical */
+      margin: 0 auto;
+    }
+
+    figcaption {
+      color: #666;
+      font-size: 13px;
+      font-style: italic;
+
+      &:before {
+        content: '';
+        display: block;
+        white-space: pre-wrap;
+      }
+    }
+  }
+
+
+  blockquote {
+	  font-size: 1.2em;
+
+    small {
+      font-size: .8em;
+      font-style: normal;
+      text-align: right;
+
+      span {
+        color: #32c5d2;
+      }
+
+    }
+
+    .attribution::before {
+      content: "— ";
+    }
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+	a.callout-link {
+		display: block;
+		padding: .2em .75em;
+		margin: .5em 0;
+		font-size: 1.1em;
+		border: 1px solid #32c5d2;
+		background: #dff6f7;
+		border-radius: 0 5px 5px 0;
+		border-left: 1em solid #32c5d2;
+        text-decoration: none;
+
+		time {
+			//display: block;
+			//text-align: right;
+			float: right;
+			font-size: small;
+			margin-left: .3em;
+		}
+
+		//time::before {
+		//	content: " • "
+		//}
+
+		span {
+			display: block;
+			text-align: right;
+			font-size: small;
+			margin-left: .3em;
+		}
+
+		//span::before {
+		//	content: " • "
+		//}
+	}
+
+}

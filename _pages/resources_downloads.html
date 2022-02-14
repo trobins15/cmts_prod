@@ -1,0 +1,22 @@
+---
+layout: wide
+permalink: /downloads/
+---
+
+<div class="usa-hero-b7"></div>
+
+<div class="grid-container">
+	<div class="grid-row">
+		<div class="desktop:grid-col- usa-prose">
+			<div class="article">
+				<h1>DOWNLOADS</h1>
+				<div class="container"><div class="row"><div class="col-md-12 files">
+					<ul class="usa-list usa-list--unstyled padding-top-2">
+						 {% for d in site.docposts reversed %}
+							 <div><a href="{{site.baseurl}}{{ d.Document }}" title="File: {{ d.filename }}, Uploaded: {{ d.date | date: '%B %d, %Y' }}" target="_new">  {{ d.title }}  <time>{{ d.date | date: '%B %Y' }}</time></a></div>
+						{% endfor %}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

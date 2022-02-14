@@ -1,0 +1,412 @@
+/*
+  Customize US Web Design System SASS
+  See all at designsystem.digital.gov/documentation/settings
+*/
+
+// Example - Override the background image in the hero component using SASS:
+//$theme-hero-image: asset_path("headers/home_opt.jpg");
+
+@import "uswds";
+
+
+// Example - Override the background image in the hero component using CSS:
+.usa-hero-home {
+  background-image: asset_url("headers/home_opt.jpg");
+  background-position: 50%;
+  height: 350px; 
+  background-size: cover;
+
+}
+// Example - Override the background image in the hero component using CSS:
+.usa-hero {
+  background-image: asset_url("headers/home_opt.jpg");
+  background-position: 50%;
+  height: 350px; 
+  background-size: cover;
+
+}
+.usa-hero-b1{
+  background-image: asset_url("headers/b1.jpg");
+  background-position: 50%;
+  height: 150px;
+  background-size: cover;
+}
+
+.usa-hero-b3{
+  background-image: asset_url("headers/b4.jpg");
+  background-position: 50%;
+  height: 150px;
+  background-size: cover;
+}
+
+
+.usa-hero-b4{
+    background-image: asset_url("headers/b4.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+
+.usa-hero-b5 {
+    background-image: asset_url("headers/b5.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-b6 {
+    background-image: asset_url("headers/b6.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-b7 {
+    background-image: asset_url("headers/b7.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+  .usa-hero-b8 {
+    background-image: asset_url("headers/b8.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-b9 {
+    background-image: asset_url("headers/b9.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-b10 {
+    background-image: asset_url("headers/b10.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+
+.usa-hero-b11 {
+    background-image: asset_url("headers/b11.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-b12 {
+    background-image: asset_url("headers/b12.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-b13 {
+    background-image: asset_url("headers/b13.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+
+.usa-hero-b14 {
+    background-image: asset_url("headers/b14.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-arctic {
+    background-image: asset_url("headers/arctic.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-m2m {
+    background-image: asset_url("headers/marine-to-mariner.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+
+.usa-hero-rad {
+    background-image: asset_url("headers/research-and-development.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-infrastructure {
+    background-image: asset_url("headers/infrastructure.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-arctic2 {
+    background-image: asset_url("headers/arctic2.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-reef1 {
+    background-image: asset_url("headers/reef1.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+    .usa-hero-resilience {
+    background-image: asset_url("headers/resilience.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-energy{
+    background-image: asset_url("headers/energy-and-emissions.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  .usa-hero-esdg{
+    background-image: asset_url("headers/esdg.jpg");
+    background-position: 50%;
+    height: 150px;
+    background-size: cover;
+  }
+  /*
+  Add your SASS/CSS here
+*/
+
+
+// default mode hide banner
+.usa-banner__content {
+  display: hidden;
+}
+
+@media screen and (min-width: 640px) {
+  .tablet\:width-1\/3 {
+    width: 33%;
+  }
+  .tablet\:float-left {
+    float: left;
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .paginate-link {
+    display: initial;
+  }
+  .paginate-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .paginate-link {
+    display: none;
+  }
+  .paginate-button {
+    display: block;
+  }
+}
+
+.font_smaller{
+  font-size: smaller;
+}
+
+
+.font_small{
+  font-size: small;
+}
+
+.article h1 {
+    margin-bottom: 0.5em;
+}
+.article h1, .center-title {
+    padding-bottom: 15px;
+    margin-bottom: 50px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #32c5d2;
+    position: relative;
+    font-family: Raleway,Open Sans,Roboto,sans-serif;
+    font-weight: 600;
+}
+
+.article h1:after, .center-title:after {
+    content: "";
+    width: 80%;
+    display: block;
+    margin: 12px auto 8px;
+    height: 4px;
+    background: transparent;
+    border-top: 1px solid #32c5d2;
+    border-bottom: 1px solid #32c5d2;
+}
+.article section {
+    border-bottom: 1px solid #e2e1e1;
+    padding: 0.5em 0.5em 1em;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, main, menu, nav, section, summary {
+    display: block;
+}
+
+
+.fr {
+    float: right!important;
+}
+.photo {
+    padding: 1em;
+    border: 1px solid #ccc;
+    background: #fff;
+    margin: 0.5em 1em;
+}
+
+img {
+    vertical-align: middle;
+    border: 0;
+}
+
+.article li span {
+    color: "#32c5d2";
+}
+.article figure {
+    display: inline-block;
+    text-align: center;
+    padding: 1em;
+    background: #fff;
+    border: 1px solid #ddd;
+    margin: 1em auto;
+}
+
+.article figure img {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.navbar-brand img {
+    display: block;
+    width: 145px;
+    height: 145px;
+}
+.navbar-brand img {
+    position: absolute;
+    margin-top: 100px;
+}
+
+.resources ul li {
+    list-style: disc;
+    margin: 0;
+    padding: 0;
+}
+
+.resources a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+.resources a:hover {
+    text-decoration: underline;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+    background-color: transparent;
+  }
+
+a:hover {text-decoration: underline;}
+
+.files {
+
+    ul {
+        margin: 0;
+        padding-left: 0;
+  
+        li {
+          list-style: none;
+        }
+      }
+
+	a {
+		display: block;
+		padding: .2em .75em;
+		margin: .5em 0;
+		//font-size: 1.1em;
+        font-size: 1em;
+        line-height: 1.4em;
+		border: 1px solid #32c5d2;
+		background: #dff6f7;
+		border-radius: 0 5px 5px 0;
+		border-left: 1em solid #32c5d2;
+
+		time {
+			//display: block;
+			//text-align: right;
+			float: right;
+			font-size: small;
+			margin-left: .3em;
+		}
+
+		//time::before {
+		//	content: " • "
+		//}
+
+		span {
+			display: block;
+			text-align: right;
+			font-size: small;
+			margin-left: .3em;
+		}
+
+		//span::before {
+		//	content: " • "
+		//}
+	}
+
+}
+
+
+  a {
+    text-decoration: underline;
+  }
+
+	a.callout-link {
+		display: block;
+		padding: .2em .75em;
+		margin: .5em 0;
+		font-size: 1.1em;
+		border: 1px solid #32c5d2;
+		background: #dff6f7;
+		border-radius: 0 5px 5px 0;
+		border-left: 1em solid #32c5d2;
+    text-decoration: none;
+    time {
+        //display: block;
+        //text-align: right;
+        float: right;
+        font-size: small;
+        margin-left: .3em;
+    }
+
+    //time::before {
+    //	content: " • "
+    //}
+
+    span {
+        display: block;
+        text-align: right;
+        font-size: small;
+        margin-left: .3em;
+    }
+}
